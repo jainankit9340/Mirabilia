@@ -34,7 +34,7 @@ jQuery("#carousel-b").owlCarousel({
     autoplayTimeout: 7000,
     smartSpeed: 800,
     nav: true,
-    navText: ["<button class='btn btn-dark'><i class='fa fa-chevron-left'></button>","<button class='btn btn-dark'><i class='fa fa-chevron-right'></button>"],
+    navText: ["<button class='btn btn-dark me-2'><i class='fa fa-chevron-left'></button>","<button class='btn btn-dark'><i class='fa fa-chevron-right'></button>"],
     loop: true,
     responsive: {
         0: {

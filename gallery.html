@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" href="./img/favicon.png" />
+    <title>Mirabella</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar bg-white">
+            <div class="container-fluid px-2 px-sm-5">
+                <a class="navbar-brand" href="index.html">
+                    <img src="./img/Mirabilia logo.jpg" height="80px" alt="logo">
+                </a>
+                <div class="d-flex align-items-center">
+                    <a href="#" class="nav-link d-none d-sm-block me-4"><i class="fa-solid fa-phone"></i> 99869 22194</a>
+                    <a href="#" class="nav-link d-none d-sm-block me-4" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="nav-link d-none d-sm-block me-4" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="nav-link d-none d-sm-block me-4" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="nav-link d-none d-sm-block me-4" target="_blank"><i class="fa-brands fa-whatsapp text-success"></i></i></a>
+                    <a href="https://drive.google.com/file/d/1wIMQvNgXuiD9utqHx3j6W-TMzw9CMQkI/view?usp=drive_link"  target="_blank" class="nav-link d-none d-sm-block me-4 btn btn-dark px-4 py-2 text-white" download>Download Brochure <i class="fa-solid fa-file-arrow-down"></i></a>
+                    <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarLight" aria-controls="offcanvasNavbarLight" aria-label="Toggle navigation">
+                        <span><i class="fa-solid fa-bars"></i></span>
+                    </button>
+                </div>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbarLight" aria-labelledby="offcanvasNavbarLightLabel">
+                    <div class="offcanvas-header">
+                        <p>&nbsp;</p>
+                        
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body off-canvas px-sm-5">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <!-- <li class="nav-item">
+                                <a class="nav-link" href="#">About</a>
+                            </li>-->
+                            <li class="nav-item">
+                                <a class="nav-link" href="amenities.html">Amenities</a>
+                            </li> 
+                            <li class="nav-item">
+                                <a class="nav-link active" href="gallery.html">Gallery</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="floor-plan.html">Floor Plan</a>
+                            </li>
+                            <li class="nav-item d-block d-sm-none">
+                                <a class="nav-link" href="https://drive.google.com/file/d/1wIMQvNgXuiD9utqHx3j6W-TMzw9CMQkI/view?usp=drive_link" target="_blank" download>Download Brochure</a>
+                            </li>
+                            <!-- <li class="nav-item">
+                                <a class="nav-link" href="#">Price</a>
+                            </li> -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <div class="d-flex">
+                                    <a href="#" class="nav-link d-block d-sm-none me-4"><i class="fa-solid fa-phone text-info"></i></a>
+                                    <a href="#" class="nav-link d-block d-sm-none me-4" target="_blank"><i class="fa-brands fa-facebook-f text-info"></i></a>
+                                    <a href="#" class="nav-link d-block d-sm-none me-4" target="_blank"><i class="fa-brands fa-twitter text-info"></i></a>
+                                    <a href="#" class="nav-link d-block d-sm-none me-4" target="_blank"><i class="fa-brands fa-linkedin-in text-info"></i></a>
+                                    <a href="#" class="nav-link d-block d-sm-none me-4" target="_blank"><i class="fa-brands fa-whatsapp text-success"></i></i></a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="jumbo_head py-20">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2 class="big-title-jumbo">Gallery</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                              <button class="btn btn-dark me-4 active" id="pills-exter-tab" data-bs-toggle="pill" data-bs-target="#pills-exter" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Exterior</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                              <button class="btn btn-dark" id="pills-inter-tab" data-bs-toggle="pill" data-bs-target="#pills-inter" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Interiors</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-exter" role="tabpanel" aria-labelledby="pills-exter-tab">
+                                <div class="owl-slider cursor-drag d-flex justify-content-end">
+                                    <div id="carousel-g" class="owl-carousel">
+                                        <div class="item">
+                                            <img src="./img/2nd entry.jpg" alt="ho">
+                                        </div>
+                                        <div class="item">
+                                            <img src="./img/01.png" alt="ho">
+                                        </div>
+                                        <div class="item">
+                                            <img src="./img/02.png" alt="ho">
+                                        </div>
+                                        <div class="item">
+                                            <img src="./img/03.png" alt="ho">
+                                        </div>
+                                        <div class="item">
+                                            <img src="./img/04.png" alt="ho">
+                                        </div>
+                                        <div class="item">
+                                            <img src="./img/05.png" alt="ho">
+                                        </div>
+                                        <div class="item">
+                                            <img src="./img/06.png" alt="ho">
+                                        </div>
+                                        <div class="item">
+                                            <img src="./img/07.png" alt="ho">
+                                        </div>
+                                        <div class="item">
+                                            <img src="./img/08.png" alt="ho">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-inter" role="tabpanel" aria-labelledby="pills-inter-tab">
+                                <div class="owl-slider cursor-drag d-flex justify-content-end">
+                                    <div id="carousel-h" class="owl-carousel">
+                                        <div class="item">
+                                            <img src="./img/inter/01.png" alt="ho">
+                                        </div>
+                                        <div class="item">
+                                            <img src="./img/inter/02.png" alt="ho">
+                                        </div>
+                                        <div class="item">
+                                            <img src="./img/inter/03.png" alt="ho">
+                                        </div>
+                                        <div class="item">
+                                            <img src="./img/inter/04.png" alt="ho">
+                                        </div>
+                                        <div class="item">
+                                            <img src="./img/inter/05.jpg" alt="ho">
+                                        </div>
+                                        <div class="item">
+                                            <img src="./img/inter/06.jpg" alt="ho">
+                                        </div>
+                                        <div class="item">
+                                            <img src="./img/inter/07.jpg" alt="ho">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <section class="footer-top">
+            <div class="container-fluid px-2 px-sm-5">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="tag-small widget  widget_tag_cloud m-b20">
+                            <p class="widget-title text-uppercase font-20">People also searched for</p>
+                            <div class="tagcloud"> 
+                                <a href="#" title="Contact Pavani Mirabilia">Contact Pavani Mirabilia</a>
+                                <a href="#" title="Apartments for sale near me">Apartments for sale near me</a>
+                                <a href="#" title="Apartment for sale near Kadugodi">Apartment for sale near Kadugodi</a>
+                                <a href="#" title="Mirabillia">Mirabillia</a>
+                                <a href="#" title="apartment sale in kadugodi">apartment sale in kadugodi</a>
+                                <a href="#" title="apartment sale in kadugodi">apartment sale in kadugodi</a>	
+                                <a href="#" title="Pavani Group Projects in Bangalore">Pavani Group Projects in Bangalore</a>								
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="widget widget_services inline-links">
+                            <p class="widget-title text-uppercase font-20"><strong>Useful links</strong></p>
+                            <ul>
+                                <li class=""> <a href="index.html">Home</a></li>
+                                <!-- <li class=""> <a href="about.html">About</a></li> -->
+                                <li class=""> <a href="amenities.html">Amenities</a></li>
+                                <li class=""> <a href="gallery.html">Gallery</a></li>
+                                <li class=""> <a href="floor-plan.html">Floor Plan</a></li>
+                                <!-- <li class=""> <a href="price.html">Price</a></li> -->
+                                <li class=""> <a href="#" target="_blank">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="tag-small widget  widget_tag_cloud m-b20">
+                            <p class="widget-title text-uppercase font-20">People also searched for</p>
+                            <div class="tagcloud"> 
+                                <a href="#" title="Contact Pavani Mirabilia ">Contact Pavani Mirabilia</a>
+                                <a href="#" title="Phone number Mirabilia">Phone number Mirabilia</a>
+                                <a href="#" title="Contact Mirabilia">Contact Mirabilia</a>
+                                <a href="#" title="Contact sales team">Contact sales team</a>	
+                                <a href="#" title="Pavani Group website">Pavani Group website</a>	
+                                <a href="#" title="Pavani new project">Pavani new project</a>	
+                                <a href="#" title="Pavani Sarovar">Pavani Sarovar</a>								
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="footer-bottom">
+            <div class="container-fluid px-2 px-sm-5">
+                <div class="row">
+                    <div class="wt-footer-bot-left col-sm-12 py-4 qw"> 
+                        <span class="copyrights-text">© 2023 Pavani Mirabilia. Designed and marketed by Official Partner &amp; not to be considered as an official website of Pavani Group</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <a href="https://wa.me/9986922194" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-whatsapp my-float"></i>
+    </a>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+    <script>
+        jQuery("#carousel-g").owlCarousel({
+            autoplay: true,
+            maxHeight: 600,
+            animateOut: 'fadeOut',
+            animateIn: 'fadeIn',
+            autoplayTimeout: 7000,
+            smartSpeed: 800,
+            nav: true,
+            navText: ["<button class='btn btn-dark me-2'><i class='fa fa-chevron-left'></button>","<button class='btn btn-dark'><i class='fa fa-chevron-right'></button>"],
+            loop: true,
+            items:1
+        });
+    </script>
+    <script>
+        jQuery("#carousel-h").owlCarousel({
+            autoplay: true,
+            maxHeight: 600,
+            animateOut: 'fadeOut',
+            animateIn: 'fadeIn',
+            autoplayTimeout: 7000,
+            smartSpeed: 800,
+            nav: true,
+            navText: ["<button class='btn btn-dark me-2'><i class='fa fa-chevron-left'></button>","<button class='btn btn-dark'><i class='fa fa-chevron-right'></button>"],
+            loop: true,
+            items:1
+        });
+    </script>
+</body>
+</html>
