@@ -746,8 +746,12 @@
                     selectedBHKOptions.push(bhkCheckboxes[i].value);
                 }
             }
-            // Get formatted time
-            var formattedTime = new Date().toLocaleTimeString(navigator.language, {
+            // Get date and time from input fields
+            var visitDate = document.getElementById("date").value;
+            var visitTime = document.getElementById("time").value;
+
+            // Format time in AM/PM format
+            var formattedTime = new Date("1970-01-01T" + visitTime + "Z").toLocaleTimeString(navigator.language, {
                 hour: '2-digit',
                 minute: '2-digit',
                 hour12: true // Set to true to use AM/PM format
@@ -769,6 +773,7 @@
                .then(function(response) {
                    console.log('Email sent:', response);
                    alert("Your request has been submitted successfully. One of our team member will reach to you soon.");
+                   document.getElementById("close_modal2").click();
                }, function(error) {
                    console.error('Email error:', error);
                    alert("An error occurred while sending the email.");
