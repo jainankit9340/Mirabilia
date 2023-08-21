@@ -622,13 +622,13 @@
                                 <div class="col-sm-6">
                                     <div class="mb-3">
                                         <label class="form-label">Name</label>
-                                        <input type="text" class="form-control" name="name" id="name" required>
+                                        <input type="text" class="form-control" name="name" id="nameb" required>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="mb-3">
                                         <label class="form-label">Email address</label>
-                                        <input type="email" class="form-control" name="email" id="email" required>
+                                        <input type="email" class="form-control" name="email" id="emailb" required>
                                     </div>
                                 </div>
                             </div>
@@ -746,16 +746,22 @@
                     selectedBHKOptions.push(bhkCheckboxes[i].value);
                 }
             }
+            // Get formatted time
+            var formattedTime = new Date().toLocaleTimeString(navigator.language, {
+                hour: '2-digit',
+                minute: '2-digit',
+                hour12: true // Set to true to use AM/PM format
+            });
 
            // Prepare email parameters
            var params = {
                to_email: 'pavanimirabiliahomes@gmail.com',
-               from_name: document.getElementById("name").value,
-               from_email: document.getElementById("email").value,
+               from_name: document.getElementById("nameb").value,
+               from_email: document.getElementById("emailb").value,
                from_mnumber: "Mobile Number: " + document.getElementById("Mnumber").value,
                from_bhk: "Enquired for : " + selectedBHKOptions.join(", "),
                from_date: "Visit Date :" + document.getElementById("date").value,
-               from_time: "Visit Time :" + document.getElementById("time").value
+               from_time: "Visit Time: " + formattedTime
            };
 
            // Send email
