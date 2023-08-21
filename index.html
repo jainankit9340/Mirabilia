@@ -737,12 +737,23 @@
            emailjs.init("niEXZnm77mp7j6cWd");
 
            // Prepare email parameters
+            var selectedBHKOptions = [];
+            var bhkCheckboxes = document.getElementsByName("bhk_option");
+            
+            // Loop through checkboxes to get selected values
+            for (var i = 0; i < bhkCheckboxes.length; i++) {
+                if (bhkCheckboxes[i].checked) {
+                    selectedBHKOptions.push(bhkCheckboxes[i].value);
+                }
+            }
+
+           // Prepare email parameters
            var params = {
                to_email: 'pavanimirabiliahomes@gmail.com',
                from_name: document.getElementById("name").value,
                from_email: document.getElementById("email").value,
                from_mnumber: "Mobile Number: " + document.getElementById("Mnumber").value,
-               from_bhk: "Enquired for : " + document.getElementsByName("bhk_option").value,
+               from_bhk: "Enquired for : " + selectedBHKOptions.join(", "),
                from_date: "Visit Date :" + document.getElementById("date").value,
                from_time: "Visit Time :" + document.getElementById("time").value
            };
@@ -758,7 +769,7 @@
                });
 
            // Clear form fields
-           document.getElementById('emailForm').reset();
+           document.getElementById('requestQuote').reset();
        });
    </script>
 </body>
