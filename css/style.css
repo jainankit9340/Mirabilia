@@ -9,6 +9,9 @@ body{
 .offcanvas-backdrop{
     background: #fff;
 }
+main{
+    padding-top: 100px;
+}
 .off-canvas .nav-link{
     font-size: 24px;
     font-weight: 700;
