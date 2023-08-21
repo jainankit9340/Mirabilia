@@ -670,12 +670,12 @@
                                         <input type="date" class="form-control" name="date" id="date">
                                     </div>
                                 </div>
-                                <div class="col-sm-6">
+                                <!-- <div class="col-sm-6">
                                     <div class="mb-3">
                                         <label class="form-label">Schedule Visit Time</label>
                                         <input type="time" class="form-control" name="time" id="time">
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                             <div class="row">
                                 <div class="col-sm-12">
@@ -746,16 +746,6 @@
                     selectedBHKOptions.push(bhkCheckboxes[i].value);
                 }
             }
-            // Get date and time from input fields
-            var visitDate = document.getElementById("date").value;
-            var visitTime = document.getElementById("time").value;
-
-            // Format time in AM/PM format
-            var formattedTime = new Date("1970-01-01T" + visitTime + "Z").toLocaleTimeString(navigator.language, {
-                hour: '2-digit',
-                minute: '2-digit',
-                hour12: true // Set to true to use AM/PM format
-            });
 
            // Prepare email parameters
            var params = {
@@ -764,8 +754,7 @@
                from_email: document.getElementById("emailb").value,
                from_mnumber: "Mobile Number: " + document.getElementById("Mnumber").value,
                from_bhk: "Enquired for : " + selectedBHKOptions.join(", "),
-               from_date: "Visit Date :" + document.getElementById("date").value,
-               from_time: "Visit Time: " + formattedTime
+               from_date: "Visit Date :" + document.getElementById("date").value
            };
 
            // Send email
