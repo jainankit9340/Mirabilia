@@ -26,7 +26,7 @@
                     <a href="#" class="nav-link d-none d-sm-block me-4" target="_blank"><i class="fa-brands fa-twitter"></i></a>
                     <a href="#" class="nav-link d-none d-sm-block me-4" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
                     <a href="#" class="nav-link d-none d-sm-block me-4" target="_blank"><i class="fa-brands fa-whatsapp text-success"></i></i></a>
-                    <a href="https://drive.google.com/file/d/1wIMQvNgXuiD9utqHx3j6W-TMzw9CMQkI/view?usp=drive_link" target="_blank" class="nav-link d-none d-sm-block me-4 btn btn-dark px-4 py-2 text-white" download>Download Brochure <i class="fa-solid fa-file-arrow-down"></i></a>
+                    <button class="nav-link d-none d-sm-block me-4 btn btn-dark px-4 py-2 text-white" data-bs-toggle="modal" data-bs-target="#formModal">Download Brochure <i class="fa-solid fa-file-arrow-down"></i></button>
                     <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarLight" aria-controls="offcanvasNavbarLight" aria-label="Toggle navigation">
                         <span><i class="fa-solid fa-bars"></i></span>
                     </button>
@@ -572,7 +572,37 @@
             </div>
         </div>
     </div>
-  <!-- modal end -->
+    <!-- modal end -->
+    <!-- Modal -->
+      <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="formleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body pos-rel text-center">
+                    <div class="img_head">
+                        <img src="./img/form_bg_b.jpg" class="wd-100" alt="form head">
+                    </div>
+                    <button type="button" class="btn-close pos-end" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h3>Download Brochure</h3>
+                    <form method="post" onsubmit="sendEmail(); reset(); return false;">
+                        <div class="mb-3">
+                            <label class="form-label">Email address</label>
+                            <input type="email" class="form-control" name="email" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Name</label>
+                            <input type="text" class="form-control" name="name" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Mobile Number</label>
+                            <input type="number" class="form-control" name="mnumber" id="Mnumber" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal end -->
     <a href="https://wa.me/9986922194" target="_blank" rel="noopener noreferrer">
         <i class="fa-brands fa-whatsapp my-float"></i>
     </a>
@@ -581,7 +611,23 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
     <script src="./js/main.js" ></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+                Host : "smtp.gmail.com",
+                Username : "pavanimirabiliahomes@gmail.com",
+                Password : "Circled12345$",
+                To : 'jainankit9340@gmail.com',
+                From : document.getElementById("email").value,
+                Subject : "This is the subject",
+                Body : "Name:" + document.getElementById("name").value + "</br> Email: " + document.getElementById("email").value + "</br> Mobile Number: " + document.getElementById("mnumber").value
+            }).then(
+            message => alert("Brochure Download Successfully!"));
+        }
+    </script>
 </body>
 </html>
 
 <!-- https://docs.google.com/spreadsheets/d/1KrAmwPSg60wJRlzX6XVZ7g6FJS9NGYHHDK4NtUyOOQQ/edit#gid=0 -->
+<!-- FAAD3E600147108BFCDCA441A71C6DC21EBF -->
