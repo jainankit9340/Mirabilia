@@ -584,7 +584,7 @@
                     <button type="button" class="btn-close pos-end" data-bs-dismiss="modal" aria-label="Close"></button>
                     <div class="com-sm-12 p-4">
                         <h3 class="mb-4">Download Brochure</h3>
-                        <form onsubmit="sendEmail(); reset(); return false;">
+                        <form id="emailForm">
                             <div class="mb-3">
                                 <label class="form-label">Email address</label>
                                 <input type="email" class="form-control" name="email" id="email" required>
@@ -597,7 +597,7 @@
                                 <label class="form-label">Mobile Number</label>
                                 <input type="number" class="form-control" name="mnumber" id="Mnumber" required>
                             </div>
-                            <button type="submit" class="btn btn-dark">Submit &amp; Download</button>
+                            <button type="submit" class="btn btn-dark">Submit &amp; Download hh</button>
                         </form>
                     </div>
                 </div>
@@ -614,7 +614,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
     <script src="./js/main.js" ></script>
     <script src="https://cdn.jsdelivr.net/npm/smtp-server@3.13.0/lib/smtp-server.min.js"></script>
-    <script>
+    <!-- <script>
         function sendEmail(){
             Email.send({
                 Host : "smtp.gmail.com",
@@ -627,6 +627,35 @@
             }).then(
             message => alert("Brochure Download Successfully!"));
         }
+    </script> -->
+    <script>
+         document.getElementById('emailForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Initialize EmailJS with your user ID
+            emailjs.init("pavanimirabiliahomes@gmail.com");
+
+            // Prepare email parameters
+            var params = {
+                to_email: 'jainankit9340@gmail.com',
+                from_name: document.getElementById("name").value,
+                from_email: document.getElementById("email").value,
+                message: "Mobile Number: " + document.getElementById("Mnumber").value
+            };
+
+            // Send email
+            emailjs.send("pavanimirabiliahomes@gmail.com", params)
+                .then(function(response) {
+                    console.log('Email sent:', response);
+                    alert("Brochure Download Successfully!");
+                }, function(error) {
+                    console.error('Email error:', error);
+                    alert("An error occurred while sending the email.");
+                });
+
+            // Clear form fields
+            document.getElementById('emailForm').reset();
+        });
     </script>
 </body>
 </html>
