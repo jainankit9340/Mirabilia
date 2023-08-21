@@ -577,27 +577,29 @@
       <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="formleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
-                <div class="modal-body pos-rel text-center">
+                <div class="modal-body pos-rel">
                     <div class="img_head">
                         <img src="./img/form_bg_b.jpg" class="wd-100" alt="form head">
                     </div>
                     <button type="button" class="btn-close pos-end" data-bs-dismiss="modal" aria-label="Close"></button>
-                    <h3>Download Brochure</h3>
-                    <form method="post" onsubmit="sendEmail(); reset(); return false;">
-                        <div class="mb-3">
-                            <label class="form-label">Email address</label>
-                            <input type="email" class="form-control" name="email" id="email" required>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Name</label>
-                            <input type="text" class="form-control" name="name" id="name" required>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Mobile Number</label>
-                            <input type="number" class="form-control" name="mnumber" id="Mnumber" required>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
+                    <div class="com-sm-12 p-4">
+                        <h3>Download Brochure</h3>
+                        <form method="post" onsubmit="sendEmail(); reset(); return false;">
+                            <div class="mb-3">
+                                <label class="form-label">Email address</label>
+                                <input type="email" class="form-control" name="email" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Name</label>
+                                <input type="text" class="form-control" name="name" id="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Mobile Number</label>
+                                <input type="number" class="form-control" name="mnumber" id="Mnumber" required>
+                            </div>
+                            <button type="submit" class="btn btn-dark">Submit</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
