@@ -15,13 +15,13 @@
 </head>
 <body>
     <header>
-        <nav class="navbar bg-white">
+        <nav class="navbar bg-white fixed-top">
             <div class="container-fluid px-2 px-sm-5">
                 <a class="navbar-brand" href="index.html">
                     <img src="./img/Mirabilia logo.jpg" height="80px" alt="logo">
                 </a>
                 <div class="d-flex align-items-center">
-                    <a href="#" class="nav-link d-none d-sm-block me-4"><i class="fa-solid fa-phone"></i> 99869 22194</a>
+                    <a href="#" class="nav-link me-4"><i class="fa-solid fa-phone"></i> 99869 22194</a>
                     <!-- <a href="#" class="nav-link d-none d-sm-block me-4" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="#" class="nav-link d-none d-sm-block me-4" target="_blank"><i class="fa-brands fa-twitter"></i></a>
                     <a href="#" class="nav-link d-none d-sm-block me-4" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a> -->
@@ -40,7 +40,7 @@
                     <div class="offcanvas-body off-canvas px-sm-5">
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                             </li>
                             <!-- <li class="nav-item">
                                 <a class="nav-link" href="#">About</a>
@@ -52,7 +52,7 @@
                                 <a class="nav-link" href="gallery.html">Gallery</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="floor-plan.html">Floor Plan</a>
+                                <a class="nav-link" href="floor-plan.html">Floor Plan</a>
                             </li>
                             <li class="nav-item d-block d-sm-none">
                                 <a class="nav-link" href="https://drive.google.com/file/d/1wIMQvNgXuiD9utqHx3j6W-TMzw9CMQkI/view?usp=drive_link" target="_blank" download>Download Brochure</a>
@@ -65,11 +65,11 @@
                             </li>
                             <li class="nav-item">
                                 <div class="d-flex">
-                                    <a href="#" class="nav-link d-block d-sm-none me-4"><i class="fa-solid fa-phone text-info"></i></a>
-                                    <a href="#" class="nav-link d-block d-sm-none me-4" target="_blank"><i class="fa-brands fa-facebook-f text-info"></i></a>
+                                    <!-- <a href="#" class="nav-link d-block d-sm-none me-4"><i class="fa-solid fa-phone text-info"></i></a> -->
+                                    <!-- <a href="#" class="nav-link d-block d-sm-none me-4" target="_blank"><i class="fa-brands fa-facebook-f text-info"></i></a>
                                     <a href="#" class="nav-link d-block d-sm-none me-4" target="_blank"><i class="fa-brands fa-twitter text-info"></i></a>
-                                    <a href="#" class="nav-link d-block d-sm-none me-4" target="_blank"><i class="fa-brands fa-linkedin-in text-info"></i></a>
-                                    <a href="#" class="nav-link d-block d-sm-none me-4" target="_blank"><i class="fa-brands fa-whatsapp text-success"></i></i></a>
+                                    <a href="#" class="nav-link d-block d-sm-none me-4" target="_blank"><i class="fa-brands fa-linkedin-in text-info"></i></a> -->
+                                    <a href="https://wa.me/9986922194" class="nav-link d-block d-sm-none me-4" target="_blank"><i class="fa-brands fa-whatsapp text-success"></i></i></a>
                                 </div>
                             </li>
                         </ul>
@@ -178,7 +178,7 @@
                     </div>
                     <button type="button" class="btn-close pos-end text-white" id="close_modal" data-bs-dismiss="modal" aria-label="Close"></button>
                     <div class="com-sm-12 p-4">
-                        <h3 class="mb-4">Download Brochure</h3>
+                        <h3 class="mb-4">Download Brochure or Call us - 99869 22194</h3>
                         <form id="emailForm">
                             <div class="mb-3">
                                 <label class="form-label">Email address</label>
@@ -190,7 +190,7 @@
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Mobile Number</label>
-                                <input type="number" class="form-control" name="mnumber" id="Mnumber" required>
+                                <input type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==10) return false;" class="form-control" name="mnumber" id="Mnumber" required>
                             </div>
                             <button type="submit" class="btn btn-dark">Submit &amp; Download</button>
                         </form>
@@ -200,6 +200,7 @@
         </div>
     </div>
     <!-- modal end -->
+    <!-- Modal -->
     <div class="modal fade" id="getQuote" tabindex="-1" aria-labelledby="formleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -229,7 +230,7 @@
                                 <div class="col-sm-6">
                                     <div class="mb-3">
                                         <label class="form-label">Mobile Number</label>
-                                        <input type="number" class="form-control" name="mnumber" id="mnumberb" required>
+                                        <input type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==10) return false;" class="form-control" name="mnumber" id="mnumberb" required>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
@@ -256,20 +257,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="mb-3">
-                                        <label class="form-label">Schedule Visit Date</label>
-                                        <input type="date" class="form-control" name="date" id="date">
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="mb-3">
-                                        <label class="form-label">Schedule Visit Time</label>
-                                        <input type="time" class="form-control" name="time" id="time">
-                                    </div>
-                                </div>
-                            </div> -->
                             <div class="row">
                                 <div class="col-sm-12">
                                     <button type="submit" class="btn btn-dark">Submit Enquiry</button>
@@ -281,6 +268,7 @@
             </div>
         </div>
     </div>
+    <!-- modal end -->
     <a href="https://wa.me/9986922194" target="_blank" rel="noopener noreferrer">
         <i class="fa-brands fa-whatsapp my-float"></i>
     </a>

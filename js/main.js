@@ -93,15 +93,15 @@ document.getElementById('requestQuote').addEventListener('submit', function (eve
   emailjs.init("niEXZnm77mp7j6cWd");
 
   // Prepare email parameters
-   var selectedBHKOptions = [];
-   var bhkCheckboxes = document.getElementsByName("bhk_option");
-   
-   // Loop through checkboxes to get selected values
-   for (var i = 0; i < bhkCheckboxes.length; i++) {
-       if (bhkCheckboxes[i].checked) {
-           selectedBHKOptions.push(bhkCheckboxes[i].value);
-       }
-   }
+  var selectedBHKOptions = [];
+  var bhkCheckboxes = document.getElementsByName("bhk_option");
+  
+  // Loop through checkboxes to get selected values
+  for (var i = 0; i < bhkCheckboxes.length; i++) {
+      if (bhkCheckboxes[i].checked) {
+          selectedBHKOptions.push(bhkCheckboxes[i].value);
+      }
+  }
 
   // Prepare email parameters
   var params = {
@@ -109,8 +109,8 @@ document.getElementById('requestQuote').addEventListener('submit', function (eve
       from_name: document.getElementById("nameb").value,
       from_email: document.getElementById("emailb").value,
       from_mnumber: "Mobile Number: " + document.getElementById("mnumberb").value,
-      from_bhk: "Enquired for : " + selectedBHKOptions.join(", "),
-      from_date: "Visit Date :" + document.getElementById("date").value
+      from_bhk: selectedBHKOptions.length > 0 ? "Enquired for: " + selectedBHKOptions.join(", ") : "Enquired for: None",
+    //   from_date: "Visit Date :" + document.getElementById("date").value
   };
 
   // Send email
