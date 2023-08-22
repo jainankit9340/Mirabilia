@@ -60,7 +60,7 @@ document.getElementById('emailForm').addEventListener('submit', function (event)
    event.preventDefault();
 
    // Initialize EmailJS with your user ID
-   emailjs.init("niEXZnm77mp7j6cWd");
+   emailjs.init("KRks2szaYEUCKdkfM");
 
    // Prepare email parameters
    var params = {
@@ -71,7 +71,7 @@ document.getElementById('emailForm').addEventListener('submit', function (event)
    };
 
    // Send email
-   emailjs.send("service_vkojx1z", "template_7ajif0i" , params)
+   emailjs.send("service_jgfvwvc", "template_ep1i5bc" , params)
        .then(function(response) {
            console.log('Email sent:', response);
            document.getElementById("down_broch").click();
@@ -90,7 +90,7 @@ document.getElementById('requestQuote').addEventListener('submit', function (eve
   event.preventDefault();
 
   // Initialize EmailJS with your user ID
-  emailjs.init("niEXZnm77mp7j6cWd");
+  emailjs.init("KRks2szaYEUCKdkfM");
 
   // Prepare email parameters
   var selectedBHKOptions = [];
@@ -114,7 +114,7 @@ document.getElementById('requestQuote').addEventListener('submit', function (eve
   };
 
   // Send email
-  emailjs.send("service_vkojx1z", "template_9761r5c" , params)
+  emailjs.send("service_jgfvwvc", "template_q4t01zo" , params)
       .then(function(response) {
           console.log('Email sent:', response);
           alert("Your request has been submitted successfully. One of our team member will reach to you soon.");
