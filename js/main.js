@@ -117,7 +117,6 @@ document.getElementById('requestQuote').addEventListener('submit', function (eve
   emailjs.send("service_jgfvwvc", "template_q4t01zo" , params)
       .then(function(response) {
           console.log('Email sent:', response);
-          alert("Your request has been submitted successfully. One of our team member will reach to you soon.");
           document.getElementById("close_modal2").click();
           window.location.href = "https://pavanimirabilia.homes/thankyou.html"
       }, function(error) {
