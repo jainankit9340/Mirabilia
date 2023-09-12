@@ -128,6 +128,33 @@ document.getElementById('requestQuote').addEventListener('submit', function (eve
   document.getElementById('requestQuote').reset();
 });
 
+document.getElementById('requestQuote2').addEventListener('submit', function (event) {
+    event.preventDefault();
+  
+    // Initialize EmailJS with your user ID
+    emailjs.init("KRks2szaYEUCKdkfM"); 
+
+    // Prepare email parameters
+    var params = {
+        from_builder: "Park East",
+        from_name: document.getElementById("namec").value,
+        from_email: document.getElementById("emailc").value,
+        from_mnumber: "Mobile Number: " + document.getElementById("mnumberc").value,
+    };
+  
+    // Send email
+    emailjs.send("service_jgfvwvc", "template_q4t01zo" , params)
+        .then(function(response) {
+            window.location.href = "./thankyou.html"
+        }, function(error) {
+            console.error('Email error:', error);
+            alert("An error occurred while sending the details.");
+        });
+  
+    // Clear form fields
+    document.getElementById('requestQuote2').reset();
+  });
+
 
 
 var lightbox = GLightbox();
