@@ -64,7 +64,7 @@ document.getElementById('emailForm').addEventListener('submit', function (event)
 
    // Prepare email parameters
    var params = {
-       to_email: 'jainankit9340@gmail.com',
+       from_builder: 'Pavani Mirabilia',
        from_name: document.getElementById("name").value,
        from_email: document.getElementById("email").value,
        from_mnumber: "Mobile Number: " + document.getElementById("Mnumber").value
@@ -105,7 +105,7 @@ document.getElementById('requestQuote').addEventListener('submit', function (eve
 
   // Prepare email parameters
   var params = {
-      to_email: 'pavanimirabiliahomes@gmail.com',
+      from_builder: 'Pavani Mirabilia',
       from_name: document.getElementById("nameb").value,
       from_email: document.getElementById("emailb").value,
       from_mnumber: "Mobile Number: " + document.getElementById("mnumberb").value,
